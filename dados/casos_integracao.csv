@@ -1,0 +1,12 @@
+entrada,esperado,regra
+GCGAATTCGC#ACGTTGCA,ACEITA,AP aceita (rc) e ALL aceita (2 de cada base)
+GCGAATTGGC#ACGTTGCA,REJEITADA_AP,AP rejeita (3a base G nao pareia com G); ALL nao executa
+GCGAATTCGC#ACGTTGCAA,REJEITADA_ALL,AP aceita; ALL rejeita (#A=3 e as demais 2)
+GGATCC#AACCGGTTAACCGGTT,ACEITA,AP aceita (BamHI) e ALL aceita (4 de cada base)
+CCCGGG#ACGTACGTACG,REJEITADA_ALL,AP aceita (SmaI); ALL rejeita (#T=2 e as demais 3)
+GCGAAUUCGC#ACGTTGCA,ERRO_ENTRADA,simbolo U fora do alfabeto {A;C;G;T;#}
+GCGAATTCGC,ERRO_ENTRADA,separador # ausente
+GCGAATTCGC#ACGT#ACGT,ERRO_ENTRADA,mais de um separador #
+GCGAATTCGC#ACGTacgt,ERRO_ENTRADA,minusculas fora do alfabeto
+#ACGT,REJEITADA_AP,parte do AP vazia
+GCGAATTCGC#,REJEITADA_ALL,AP aceita; parte do ALL vazia

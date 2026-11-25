@@ -1,0 +1,21 @@
+entrada,esperado,regra
+ACGT,ACEITA,#A=#C=#G=#T=1 (caso minimo)
+CAGT,ACEITA,#A=#C=#G=#T=1 (outra ordem)
+TGCA,ACEITA,#A=#C=#G=#T=1 (ordem inversa)
+AACCGGTT,ACEITA,2 de cada base em blocos
+CCGGAATT,ACEITA,2 de cada base em blocos
+GTCAGTCA,ACEITA,2 de cada base intercaladas
+ATCGGCTA,ACEITA,2 de cada base (palindromo)
+ACGTTGCA,ACEITA,2 de cada base
+ACGTACGT,ACEITA,2 de cada base
+AAAACCCCGGGGTTTT,ACEITA,4 de cada base
+,REJEITA,entrada vazia
+A,REJEITA,faltam C G T
+ACG,REJEITA,falta T
+AAAA,REJEITA,faltam C G T
+ACGTA,REJEITA,#A=2 e #C=#G=#T=1
+ACGTACG,REJEITA,#T=1 e as demais 2
+AACCGGT,REJEITA,#T=1 e as demais 2
+AACCGGTTT,REJEITA,#T=3 e as demais 2
+GGGGCCCC,REJEITA,#A=#T=0
+AAAACCCCGGGGTTT,REJEITA,#T=3 e as demais 4

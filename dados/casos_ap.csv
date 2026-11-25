@@ -1,0 +1,21 @@
+entrada,esperado,regra
+AT,ACEITA,w.rc(w) com |w|=1 (caso minimo)
+TA,ACEITA,w.rc(w) com |w|=1
+CG,ACEITA,w.rc(w) com |w|=1
+GC,ACEITA,w.rc(w) com |w|=1
+ACGT,ACEITA,rc(AC)=GT
+GAATTC,ACEITA,sitio EcoRI = reverso-complementar de si mesmo
+GGATCC,ACEITA,sitio BamHI
+AAGCTT,ACEITA,sitio HindIII
+CCCGGG,ACEITA,sitio SmaI
+GCGAATTCGC,ACEITA,w=GCGAA e rc(w)=TTCGC
+AAAATTTT,ACEITA,w=AAAA e rc(w)=TTTT
+,REJEITA,entrada vazia (w deve ter ao menos 1 base)
+A,REJEITA,comprimento impar
+AA,REJEITA,A so pareia com T
+AC,REJEITA,A so pareia com T
+GG,REJEITA,G so pareia com C
+ACGA,REJEITA,A (inicio) nao pareia com A (fim)
+GGATCG,REJEITA,G (inicio) nao pareia com G (fim)
+GAATTCA,REJEITA,comprimento impar
+GCGAATTGGC,REJEITA,3a base G nao pareia com 8a base G
